@@ -1,0 +1,289 @@
+INFO:root:-----------------------------------------------
+INFO:root:---- Setting up cache ----
+INFO:root:cache length = 256, size = 2.176 kB, mask = b11111111
+INFO:root:-----------------------------------------------
+INFO:root:-----------------------------------------------
+INFO:root:Crawler Initialized.
+INFO:root:Entry Point: http://learnair.media.mit.edu:8000/
+INFO:root:-----------------------------------------------
+INFO:root:-----------------------------------------------
+INFO:root:Crawler Initialized.
+INFO:root:Entry Point: http://learnair.media.mit.edu:8000/
+INFO:root:-----------------------------------------------
+INFO:root:current node: http://learnair.media.mit.edu:8000/
+INFO:root:current node type: entry_point
+INFO:root:---history----
+INFO:root:[]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): learnair.media.mit.edu
+INFO:root:http://learnair.media.mit.edu:8000/ downloaded.
+INFO:root:SEARCH_LIST: looking for singular: http://learnair.media.mit.edu:8000/rels/organization
+INFO:root:SEARCH_LIST: looking for plural as item_list: ['http://learnair.media.mit.edu:8000/rels/organizations', 'http://learnair.media.mit.edu:8000/rels/organizationes']
+INFO:root:SEARCH_LIST: looking for title: resenv test organization #1
+INFO:root:CRAWL: 1 LINKS UNCACHED OF 1 LINKS FOUND
+INFO:root:CRAWL: crawling to http://learnair.media.mit.edu:8000/organizations/
+INFO:root:CRAWL: type: http://learnair.media.mit.edu:8000/rels/organizations
+INFO:root:MAIN CRAWL LOOP ITERATION 1 -----------------
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): learnair.media.mit.edu
+INFO:root:http://learnair.media.mit.edu:8000/organizations/ downloaded.
+INFO:root:SEARCH_LIST: looking for singular: http://learnair.media.mit.edu:8000/rels/organization
+INFO:root:SEARCH_LIST: looking for plural as item_list: ['http://learnair.media.mit.edu:8000/rels/organizations', 'http://learnair.media.mit.edu:8000/rels/organizationes']
+INFO:root:SEARCH_LIST: looking for title: resenv test organization #1
+INFO:root:SEARCH_LIST: matched search_type http://learnair.media.mit.edu:8000/rels/organizations
+INFO:root:SEARCH_LIST: matched search_title ResEnv Test Organization #1
+INFO:root:SEARCH_LIST: matched search_type http://learnair.media.mit.edu:8000/rels/organizations
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+INFO:root:New Resource Found!  http://learnair.media.mit.edu:8000/organizations/1
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+WARNING:root:QUEUE: Queue and ZMQ Socket undefined
+INFO:root:--- crawling ended, 1 pages crawled ---
+INFO:root:found organization ResEnv Test Organization #1: http://learnair.media.mit.edu:8000/organizations/1
+INFO:root:current node: http://learnair.media.mit.edu:8000/organizations/1
+INFO:root:current node type: organization
+INFO:root:---history----
+INFO:root:[{'command': 'entry_point', 'href': 'http://learnair.media.mit.edu:8000/', 'type': 'entry_point'}]
+INFO:root:-----------------------------------------------
+INFO:root:---- Setting up cache ----
+INFO:root:cache length = 256, size = 2.176 kB, mask = b11111111
+INFO:root:-----------------------------------------------
+INFO:root:-----------------------------------------------
+INFO:root:Crawler Initialized.
+INFO:root:Entry Point: http://learnair.media.mit.edu:8000/
+INFO:root:-----------------------------------------------
+INFO:root:-----------------------------------------------
+INFO:root:Crawler Initialized.
+INFO:root:Entry Point: http://learnair.media.mit.edu:8000/
+INFO:root:-----------------------------------------------
+INFO:root:current node: http://learnair.media.mit.edu:8000/
+INFO:root:current node type: entry_point
+INFO:root:---history----
+INFO:root:[]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): learnair.media.mit.edu
+INFO:root:http://learnair.media.mit.edu:8000/ downloaded.
+INFO:root:SEARCH_LIST: looking for singular: http://learnair.media.mit.edu:8000/rels/organization
+INFO:root:SEARCH_LIST: looking for plural as item_list: ['http://learnair.media.mit.edu:8000/rels/organizations', 'http://learnair.media.mit.edu:8000/rels/organizationes']
+INFO:root:SEARCH_LIST: looking for title: resenv test organization #1
+INFO:root:CRAWL: 1 LINKS UNCACHED OF 1 LINKS FOUND
+INFO:root:CRAWL: crawling to http://learnair.media.mit.edu:8000/organizations/
+INFO:root:CRAWL: type: http://learnair.media.mit.edu:8000/rels/organizations
+INFO:root:MAIN CRAWL LOOP ITERATION 1 -----------------
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): learnair.media.mit.edu
+INFO:root:http://learnair.media.mit.edu:8000/organizations/ downloaded.
+INFO:root:SEARCH_LIST: looking for singular: http://learnair.media.mit.edu:8000/rels/organization
+INFO:root:SEARCH_LIST: looking for plural as item_list: ['http://learnair.media.mit.edu:8000/rels/organizations', 'http://learnair.media.mit.edu:8000/rels/organizationes']
+INFO:root:SEARCH_LIST: looking for title: resenv test organization #1
+INFO:root:SEARCH_LIST: matched search_type http://learnair.media.mit.edu:8000/rels/organizations
+INFO:root:SEARCH_LIST: matched search_title ResEnv Test Organization #1
+INFO:root:SEARCH_LIST: matched search_type http://learnair.media.mit.edu:8000/rels/organizations
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+INFO:root:New Resource Found!  http://learnair.media.mit.edu:8000/organizations/1
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+WARNING:root:QUEUE: Queue and ZMQ Socket undefined
+INFO:root:--- crawling ended, 1 pages crawled ---
+INFO:root:found organization ResEnv Test Organization #1: http://learnair.media.mit.edu:8000/organizations/1
+INFO:root:current node: http://learnair.media.mit.edu:8000/organizations/1
+INFO:root:current node type: organization
+INFO:root:---history----
+INFO:root:[{'command': 'entry_point', 'href': 'http://learnair.media.mit.edu:8000/', 'type': 'entry_point'}]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): learnair.media.mit.edu
+INFO:root:http://learnair.media.mit.edu:8000/organizations/1 downloaded.
+INFO:root:SEARCH_LIST: looking for singular: http://learnair.media.mit.edu:8000/rels/deployment
+INFO:root:SEARCH_LIST: looking for plural as item_list: ['http://learnair.media.mit.edu:8000/rels/deployments', 'http://learnair.media.mit.edu:8000/rels/deploymentes']
+INFO:root:SEARCH_LIST: looking for title: test deployment #2
+INFO:root:CRAWL: moving to http://learnair.media.mit.edu:8000/deployments/?organization_id=1
+INFO:root:CRAWL: type: http://learnair.media.mit.edu:8000/rels/deployments
+INFO:root:CRAWL: depth: 1
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): learnair.media.mit.edu
+INFO:root:http://learnair.media.mit.edu:8000/deployments/?organization_id=1 downloaded.
+INFO:root:SEARCH_LIST: looking for singular: http://learnair.media.mit.edu:8000/rels/deployment
+INFO:root:SEARCH_LIST: looking for plural as item_list: ['http://learnair.media.mit.edu:8000/rels/deployments', 'http://learnair.media.mit.edu:8000/rels/deploymentes']
+INFO:root:SEARCH_LIST: looking for title: test deployment #2
+INFO:root:SEARCH_LIST: matched search_type http://learnair.media.mit.edu:8000/rels/deployments
+INFO:root:SEARCH_LIST: matched search_title Test Deployment #2
+INFO:root:SEARCH_LIST: matched search_type http://learnair.media.mit.edu:8000/rels/deployments
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+INFO:root:New Resource Found!  http://learnair.media.mit.edu:8000/deployments/2
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+INFO:root:traverse to deployment Test Deployment #2: http://learnair.media.mit.edu:8000/deployments/2
+INFO:root:current node: http://learnair.media.mit.edu:8000/deployments/2
+INFO:root:current node type: deployment
+INFO:root:---history----
+INFO:root:[{'command': 'entry_point', 'href': 'http://learnair.media.mit.edu:8000/', 'type': 'entry_point'}, {'command': 'crawl', 'href': u'http://learnair.media.mit.edu:8000/organizations/1', 'type': 'organization'}]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): learnair.media.mit.edu
+INFO:root:http://learnair.media.mit.edu:8000/deployments/2 downloaded.
+INFO:root:SEARCH_LIST: looking for singular: http://learnair.media.mit.edu:8000/rels/device
+INFO:root:SEARCH_LIST: looking for plural as item_list: ['http://learnair.media.mit.edu:8000/rels/devices', 'http://learnair.media.mit.edu:8000/rels/devicees']
+INFO:root:SEARCH_LIST: looking for title: testdevice001
+INFO:root:CRAWL: moving to http://learnair.media.mit.edu:8000/organizations/1
+INFO:root:CRAWL: type: http://learnair.media.mit.edu:8000/rels/organization
+INFO:root:CRAWL: depth: 1
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): learnair.media.mit.edu
+INFO:root:http://learnair.media.mit.edu:8000/organizations/1 downloaded.
+INFO:root:SEARCH_LIST: looking for singular: http://learnair.media.mit.edu:8000/rels/device
+INFO:root:SEARCH_LIST: looking for plural as item_list: ['http://learnair.media.mit.edu:8000/rels/devices', 'http://learnair.media.mit.edu:8000/rels/devicees']
+INFO:root:SEARCH_LIST: looking for title: testdevice001
+INFO:root:CRAWL: moving to http://learnair.media.mit.edu:8000/sites/?deployment_id=2
+INFO:root:CRAWL: type: http://learnair.media.mit.edu:8000/rels/sites
+INFO:root:CRAWL: depth: 1
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): learnair.media.mit.edu
+INFO:root:http://learnair.media.mit.edu:8000/sites/?deployment_id=2 downloaded.
+INFO:root:SEARCH_LIST: looking for singular: http://learnair.media.mit.edu:8000/rels/device
+INFO:root:SEARCH_LIST: looking for plural as item_list: ['http://learnair.media.mit.edu:8000/rels/devices', 'http://learnair.media.mit.edu:8000/rels/devicees']
+INFO:root:SEARCH_LIST: looking for title: testdevice001
+INFO:root:CRAWL: moving to http://learnair.media.mit.edu:8000/devices/?deployment_id=2
+INFO:root:CRAWL: type: http://learnair.media.mit.edu:8000/rels/devices
+INFO:root:CRAWL: depth: 1
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): learnair.media.mit.edu
+INFO:root:http://learnair.media.mit.edu:8000/devices/?deployment_id=2 downloaded.
+INFO:root:SEARCH_LIST: looking for singular: http://learnair.media.mit.edu:8000/rels/device
+INFO:root:SEARCH_LIST: looking for plural as item_list: ['http://learnair.media.mit.edu:8000/rels/devices', 'http://learnair.media.mit.edu:8000/rels/devicees']
+INFO:root:SEARCH_LIST: looking for title: testdevice001
+INFO:root:SEARCH_LIST: matched search_type http://learnair.media.mit.edu:8000/rels/devices
+INFO:root:SEARCH_LIST: matched search_title testdevice001
+INFO:root:SEARCH_LIST: matched search_type http://learnair.media.mit.edu:8000/rels/devices
+INFO:root:SEARCH_LIST: matched search_type http://learnair.media.mit.edu:8000/rels/devices
+INFO:root:SEARCH_LIST: matched search_type http://learnair.media.mit.edu:8000/rels/devices
+INFO:root:SEARCH_LIST: matched search_type http://learnair.media.mit.edu:8000/rels/devices
+INFO:root:SEARCH_LIST: matched search_type http://learnair.media.mit.edu:8000/rels/devices
+INFO:root:SEARCH_LIST: matched search_type http://learnair.media.mit.edu:8000/rels/devices
+INFO:root:SEARCH_LIST: matched search_type http://learnair.media.mit.edu:8000/rels/devices
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+INFO:root:New Resource Found!  http://learnair.media.mit.edu:8000/devices/5
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+INFO:root:traverse to device testdevice001: http://learnair.media.mit.edu:8000/devices/5
+INFO:root:current node: http://learnair.media.mit.edu:8000/devices/5
+INFO:root:current node type: device
+INFO:root:---history----
+INFO:root:[{'command': 'entry_point', 'href': 'http://learnair.media.mit.edu:8000/', 'type': 'entry_point'}, {'command': 'crawl', 'href': u'http://learnair.media.mit.edu:8000/organizations/1', 'type': 'organization'}, {'command': 'traverse', 'href': u'http://learnair.media.mit.edu:8000/deployments/2', 'type': 'deployment'}]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): learnair.media.mit.edu
+INFO:root:http://learnair.media.mit.edu:8000/devices/5 downloaded.
+INFO:root:SEARCH_LIST: looking for singular: http://learnair.media.mit.edu:8000/rels/sensor
+INFO:root:SEARCH_LIST: looking for plural as item_list: ['http://learnair.media.mit.edu:8000/rels/sensors', 'http://learnair.media.mit.edu:8000/rels/sensores']
+INFO:root:SEARCH_LIST: looking for title: cot
+INFO:root:CRAWL: moving to http://learnair.media.mit.edu:8000/deployments/2
+INFO:root:CRAWL: type: http://learnair.media.mit.edu:8000/rels/deployment
+INFO:root:CRAWL: depth: 1
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): learnair.media.mit.edu
+INFO:root:http://learnair.media.mit.edu:8000/deployments/2 downloaded.
+INFO:root:SEARCH_LIST: looking for singular: http://learnair.media.mit.edu:8000/rels/sensor
+INFO:root:SEARCH_LIST: looking for plural as item_list: ['http://learnair.media.mit.edu:8000/rels/sensors', 'http://learnair.media.mit.edu:8000/rels/sensores']
+INFO:root:SEARCH_LIST: looking for title: cot
+INFO:root:CRAWL: moving to http://learnair.media.mit.edu:8000/sites/1
+INFO:root:CRAWL: type: http://learnair.media.mit.edu:8000/rels/site
+INFO:root:CRAWL: depth: 1
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): learnair.media.mit.edu
+INFO:root:http://learnair.media.mit.edu:8000/sites/1 downloaded.
+INFO:root:SEARCH_LIST: looking for singular: http://learnair.media.mit.edu:8000/rels/sensor
+INFO:root:SEARCH_LIST: looking for plural as item_list: ['http://learnair.media.mit.edu:8000/rels/sensors', 'http://learnair.media.mit.edu:8000/rels/sensores']
+INFO:root:SEARCH_LIST: looking for title: cot
+INFO:root:CRAWL: moving to http://learnair.media.mit.edu:8000/sensors/?device_id=5
+INFO:root:CRAWL: type: http://learnair.media.mit.edu:8000/rels/sensors
+INFO:root:CRAWL: depth: 1
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): learnair.media.mit.edu
+INFO:root:http://learnair.media.mit.edu:8000/sensors/?device_id=5 downloaded.
+INFO:root:SEARCH_LIST: looking for singular: http://learnair.media.mit.edu:8000/rels/sensor
+INFO:root:SEARCH_LIST: looking for plural as item_list: ['http://learnair.media.mit.edu:8000/rels/sensors', 'http://learnair.media.mit.edu:8000/rels/sensores']
+INFO:root:SEARCH_LIST: looking for title: cot
+INFO:root:SEARCH_LIST: matched search_type http://learnair.media.mit.edu:8000/rels/sensors
+INFO:root:CRAWL: moving to http://learnair.media.mit.edu:8000/contacts/?devices=5
+INFO:root:CRAWL: type: http://learnair.media.mit.edu:8000/rels/contacts
+INFO:root:CRAWL: depth: 1
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): learnair.media.mit.edu
+INFO:root:http://learnair.media.mit.edu:8000/contacts/?devices=5 downloaded.
+INFO:root:SEARCH_LIST: looking for singular: http://learnair.media.mit.edu:8000/rels/sensor
+INFO:root:SEARCH_LIST: looking for plural as item_list: ['http://learnair.media.mit.edu:8000/rels/sensors', 'http://learnair.media.mit.edu:8000/rels/sensores']
+INFO:root:SEARCH_LIST: looking for title: cot
+INFO:root:CRAWL: moving to http://learnair.media.mit.edu:8000/api_datastores/?device_id=5
+INFO:root:CRAWL: type: http://learnair.media.mit.edu:8000/rels/api_datastores
+INFO:root:CRAWL: depth: 1
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): learnair.media.mit.edu
+INFO:root:http://learnair.media.mit.edu:8000/api_datastores/?device_id=5 downloaded.
+INFO:root:SEARCH_LIST: looking for singular: http://learnair.media.mit.edu:8000/rels/sensor
+INFO:root:SEARCH_LIST: looking for plural as item_list: ['http://learnair.media.mit.edu:8000/rels/sensors', 'http://learnair.media.mit.edu:8000/rels/sensores']
+INFO:root:SEARCH_LIST: looking for title: cot
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): learnair.media.mit.edu
+INFO:root:http://learnair.media.mit.edu:8000/devices/5 downloaded.
+INFO:root:SEARCH_LIST: looking for singular: createform
+INFO:root:SEARCH_LIST: looking for plural as item_list: createform
+INFO:root:CRAWL: moving to http://learnair.media.mit.edu:8000/deployments/2
+INFO:root:CRAWL: type: http://learnair.media.mit.edu:8000/rels/deployment
+INFO:root:CRAWL: depth: 1
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): learnair.media.mit.edu
+INFO:root:http://learnair.media.mit.edu:8000/deployments/2 downloaded.
+INFO:root:SEARCH_LIST: looking for singular: createform
+INFO:root:SEARCH_LIST: looking for plural as item_list: createform
+INFO:root:CRAWL: moving to http://learnair.media.mit.edu:8000/sites/1
+INFO:root:CRAWL: type: http://learnair.media.mit.edu:8000/rels/site
+INFO:root:CRAWL: depth: 1
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): learnair.media.mit.edu
+INFO:root:http://learnair.media.mit.edu:8000/sites/1 downloaded.
+INFO:root:SEARCH_LIST: looking for singular: createform
+INFO:root:SEARCH_LIST: looking for plural as item_list: createform
+INFO:root:CRAWL: moving to http://learnair.media.mit.edu:8000/sensors/?device_id=5
+INFO:root:CRAWL: type: http://learnair.media.mit.edu:8000/rels/sensors
+INFO:root:CRAWL: depth: 1
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): learnair.media.mit.edu
+INFO:root:http://learnair.media.mit.edu:8000/sensors/?device_id=5 downloaded.
+INFO:root:SEARCH_LIST: looking for singular: createform
+INFO:root:SEARCH_LIST: looking for plural as item_list: createform
+INFO:root:SEARCH_LIST: matched search_type createForm
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+INFO:root:New Resource Found!  http://learnair.media.mit.edu:8000/sensors/create?device_id=5
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): learnair.media.mit.edu
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): learnair.media.mit.edu
+INFO:root:http://learnair.media.mit.edu:8000/devices/5 downloaded.
+INFO:root:SEARCH_LIST: looking for singular: http://learnair.media.mit.edu:8000/rels/sensor
+INFO:root:SEARCH_LIST: looking for plural as item_list: ['http://learnair.media.mit.edu:8000/rels/sensors', 'http://learnair.media.mit.edu:8000/rels/sensores']
+INFO:root:SEARCH_LIST: looking for title: cot
+INFO:root:CRAWL: moving to http://learnair.media.mit.edu:8000/deployments/2
+INFO:root:CRAWL: type: http://learnair.media.mit.edu:8000/rels/deployment
+INFO:root:CRAWL: depth: 1
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): learnair.media.mit.edu
+INFO:root:http://learnair.media.mit.edu:8000/deployments/2 downloaded.
+INFO:root:SEARCH_LIST: looking for singular: http://learnair.media.mit.edu:8000/rels/sensor
+INFO:root:SEARCH_LIST: looking for plural as item_list: ['http://learnair.media.mit.edu:8000/rels/sensors', 'http://learnair.media.mit.edu:8000/rels/sensores']
+INFO:root:SEARCH_LIST: looking for title: cot
+INFO:root:CRAWL: moving to http://learnair.media.mit.edu:8000/sites/1
+INFO:root:CRAWL: type: http://learnair.media.mit.edu:8000/rels/site
+INFO:root:CRAWL: depth: 1
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): learnair.media.mit.edu
+INFO:root:http://learnair.media.mit.edu:8000/sites/1 downloaded.
+INFO:root:SEARCH_LIST: looking for singular: http://learnair.media.mit.edu:8000/rels/sensor
+INFO:root:SEARCH_LIST: looking for plural as item_list: ['http://learnair.media.mit.edu:8000/rels/sensors', 'http://learnair.media.mit.edu:8000/rels/sensores']
+INFO:root:SEARCH_LIST: looking for title: cot
+INFO:root:CRAWL: moving to http://learnair.media.mit.edu:8000/sensors/?device_id=5
+INFO:root:CRAWL: type: http://learnair.media.mit.edu:8000/rels/sensors
+INFO:root:CRAWL: depth: 1
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): learnair.media.mit.edu
+INFO:root:http://learnair.media.mit.edu:8000/sensors/?device_id=5 downloaded.
+INFO:root:SEARCH_LIST: looking for singular: http://learnair.media.mit.edu:8000/rels/sensor
+INFO:root:SEARCH_LIST: looking for plural as item_list: ['http://learnair.media.mit.edu:8000/rels/sensors', 'http://learnair.media.mit.edu:8000/rels/sensores']
+INFO:root:SEARCH_LIST: looking for title: cot
+INFO:root:SEARCH_LIST: matched search_type http://learnair.media.mit.edu:8000/rels/sensors
+INFO:root:SEARCH_LIST: matched search_title COT
+INFO:root:SEARCH_LIST: matched search_type http://learnair.media.mit.edu:8000/rels/sensors
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+INFO:root:New Resource Found!  http://learnair.media.mit.edu:8000/sensors/3
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+INFO:root:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+INFO:root:traverse to sensor COT: http://learnair.media.mit.edu:8000/sensors/3
+INFO:root:current node: http://learnair.media.mit.edu:8000/sensors/3
+INFO:root:current node type: sensor
+INFO:root:---history----
+INFO:root:[{'command': 'entry_point', 'href': 'http://learnair.media.mit.edu:8000/', 'type': 'entry_point'}, {'command': 'crawl', 'href': u'http://learnair.media.mit.edu:8000/organizations/1', 'type': 'organization'}, {'command': 'traverse', 'href': u'http://learnair.media.mit.edu:8000/deployments/2', 'type': 'deployment'}, {'command': 'traverse', 'href': u'http://learnair.media.mit.edu:8000/devices/5', 'type': 'device'}]
+WARNING:root:post data malformed
+INFO:root:current node: http://learnair.media.mit.edu:8000/sensors/3
+INFO:root:current node type: sensor
+INFO:root:---history----
+INFO:root:[{'command': 'entry_point', 'href': 'http://learnair.media.mit.edu:8000/', 'type': 'entry_point'}, {'command': 'crawl', 'href': u'http://learnair.media.mit.edu:8000/organizations/1', 'type': 'organization'}, {'command': 'traverse', 'href': u'http://learnair.media.mit.edu:8000/deployments/2', 'type': 'deployment'}, {'command': 'traverse', 'href': u'http://learnair.media.mit.edu:8000/devices/5', 'type': 'device'}]
