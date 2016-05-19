@@ -318,7 +318,6 @@ class ChainTraversal(object):
         return self.add_data(new_data)
 
 
-
     def add_and_move_to_resource(self, resource_type, post_data, \
             plural_resource_type=None):
 
@@ -340,24 +339,71 @@ class ChainTraversal(object):
                 plural_resource_type=plural_resource_type)
 
 
+    def find_and_move_path_exists(self, path_list):
+        ''' expects a list of dicts that will guide us through chain.
+        it will crawl/search for the first object, and then move along
+        the path of all subsequent objects.
 
-def get_or_create_resource():
+        path_list= [{'type':'organization', 'name':'testOrg Name'},
+        {'type':'deployment', 'name':'learnairNet'}, {'type':'device',
+        'name':'device1'] ...'''
 
-    #use previous, check if resource exists, if it does then send resource,
-    #if not send create link
-    #if not get create_link and return
-    pass
+        self.find_a_resource(path_list[0]['type'], path_list[0]['name'])
 
-
-#find a deployment, move to nearest site, look at device titles
-#if no matching device title, create device, return device resource
+        for x in range(len(path_list)-1):
+            self.move_to_resource(path_list[x+1]['type'], path_list[x+1]['name'])
 
 
+    def find_and_move_path_create(self, path_list):
+        ''' same as find_and_move_path_exists, but this will create the specified
+        path if it does not exist'''
 
-#find a deployment, move to site to devices, move to devices directly from
-#deployment, find matching device, if no matching sensor title, create sensor
-#return sensor resource
+        self.find_a_resource(path_list[0]['type'], path_list[0]['name'])
 
+        for x in range(len(path_list)-1):
+            self.add_and_move_to_resource(path_list[x+1]['type'], path_list[x+1]['name'])
+
+
+
+class PromptedChainTraverse(object):
+
+
+    def __init__(self, crawl_delay_default=200,
+            entry_point_default='http://learnair.media.mit.edu:8000/',
+            namespace_default='http://learnair.media.mit.edu:8000/rels/'):
+
+        try:
+            crawl_delay = int(raw_input('Craw Delay: [%s] ' % crawl_delay_default))
+        except:
+            crawl_delay = crawl_delay_default
+
+        entry_point = raw_input('Entry Point: [%s] ' % entry_point_default)
+        entry_point = entry_point or entry_point_default
+
+        namespace = raw_input('Namespace: [%s] ' % namespace_default)
+        namespace = namespace or namespace_default
+
+        print 'Creating Traverser with crawl delay %s ms' % crawl_delay
+        print '-- entry point: %s' % entry_point
+        print '-- namespace: %s' % namespace
+
+        self.traveler = ChainTraversal(
+                crawl_delay=crawl_delay,
+                entry_point=entry_point,
+                namespace=namespace)
+
+
+    def prompt_loop(self):
+        '''
+        interaction loop with state for traversing chain.
+        Get a list of current state, give movement options to resources from current location.
+        Check if datahistory, allow to 'add data', give options for formating/pulling.
+        Allow "back to x" if history, forward if we have gone back.
+        Allow crawl, add resource.
+        Allow printing history.
+        Allow exit.
+        '''
+        options = []
 
 
 if __name__ == "__main__":
