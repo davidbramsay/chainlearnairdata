@@ -16,6 +16,7 @@ import zmq
 import json
 import xlrd
 import csv
+from chainTraversal import ChainTraversal
 from datetime import datetime
 from tzlocal import get_localzone
 from dateutil import parser
@@ -136,29 +137,208 @@ def pull_xlsx_values(file_path):
     print out
 
 
+def smart_upload(upload_array):
+    #look at keys, figure out where these values should be stored in chain,
+    #call upload and actually upload values
+
+    def switch(x):
+        return {
+            'temperature ( c raw)': {
+                'device':{
+                    'unique_name':'learnAirFixedV1',
+                    'device_type':'learnAirFixedV1'},
+                'sensor': {
+                    'sensor_type':'SHT21',
+                    'metric':'temperature_raw',
+                    'unit':'raw'},
+                                    },
+
+            'humidity ( % raw)':{
+                'device':{
+                    'unique_name':'learnAirFixedV1',
+                    'device_type':'learnAirFixedV1'},
+                'sensor': {
+                    'sensor_type':'SHT21',
+                    'metric':'humidity_raw',
+                    'unit':'raw'},
+                                    },
+
+            'light ( lx)':{
+                'device':{
+                    'unique_name':'learnAirFixedV1',
+                    'device_type':'learnAirFixedV1'},
+                'sensor': {
+                    'sensor_type':'BH1730FVC',
+                    'metric':'light',
+                    'unit':'lux'},
+                                    },
+
+            'battery ( %)':{
+                'device':{
+                    'unique_name':'learnAirFixedV1',
+                    'device_type':'learnAirFixedV1'},
+                'sensor': {
+                    'sensor_type':'generic_battery',
+                    'metric':'charge',
+                    'unit':'%'},
+                                    },
+
+            'carbon monxide ( kohm)': { #misspelled by smartcitizen
+                'device':{
+                    'unique_name':'learnAirFixedV1',
+                    'device_type':'learnAirFixedV1'},
+                'sensor': {
+                    'sensor_type':'MICS4514',
+                    'metric':'CO_raw',
+                    'unit':'kOhm'},
+                                    },
+
+            'nitrogen dioxide ( kohm)': {
+                'device':{
+                    'unique_name':'learnAirFixedV1',
+                    'device_type':'learnAirFixedV1'},
+                'sensor': {
+                    'sensor_type':'MICS4514',
+                    'metric':'NO2_raw',
+                    'unit':'kOhm'},
+                                    },
+
+            'noise ( mv)': {
+                'device':{
+                    'unique_name':'learnAirFixedV1',
+                    'device_type':'learnAirFixedV1'},
+                'sensor': {
+                    'sensor_type':'POM-3044P-R',
+                    'metric':'noise_raw',
+                    'unit':'mV'},
+                                    },
+
+            'alphas1_aux': {
+                'device':{
+                    'unique_name':'learnAirFixedV1',
+                    'device_type':'learnAirFixedV1'},
+                'sensor': {
+                    'sensor_type':'AlphasenseO3-A4',
+                    'metric':'O3_raw_aux',
+                    'unit':'raw'},
+                                    },
+
+            'alphas1_work': {
+                'device':{
+                    'unique_name':'learnAirFixedV1',
+                    'device_type':'learnAirFixedV1'},
+                'sensor': {
+                    'sensor_type':'AlphasenseO3-A4',
+                    'metric':'O3_raw_work',
+                    'unit':'raw'},
+                                    },
+
+            'alphas2_aux': {
+                'device':{
+                    'unique_name':'learnAirFixedV1',
+                    'device_type':'learnAirFixedV1'},
+                'sensor': {
+                    'sensor_type':'AlphasenseCO-A4',
+                    'metric':'CO_raw_aux',
+                    'unit':'raw'},
+                                    },
+
+            'alphas2_work': {
+                'device':{
+                    'unique_name':'learnAirFixedV1',
+                    'device_type':'learnAirFixedV1'},
+                'sensor': {
+                    'sensor_type':'AlphasenseCO-A4',
+                    'metric':'CO_raw_work',
+                    'unit':'raw'},
+                                    },
+
+            'alphas3_aux': {
+                'device':{
+                    'unique_name':'learnAirFixedV1',
+                    'device_type':'learnAirFixedV1'},
+                'sensor': {
+                    'sensor_type':'AlphasenseH2S-A4',
+                    'metric':'H2S_raw_aux',
+                    'unit':'raw'},
+                                    },
+
+            'alphas3_work': {
+                'device':{
+                    'unique_name':'learnAirFixedV1',
+                    'device_type':'learnAirFixedV1'},
+                'sensor': {
+                    'sensor_type':'AlphasenseH2S-A4',
+                    'metric':'H2S_raw_work',
+                    'unit':'raw'},
+                                    },
+
+            'alphatemp': {
+                'device':{
+                    'unique_name':'learnAirFixedV1',
+                    'device_type':'learnAirFixedV1'},
+                'sensor': {
+                    'sensor_type':'AlphasenseAFEtemp',
+                    'metric':'temperature_raw',
+                    'unit':'raw'},
+                                    },
+
+            'sharpdust': {
+                'device':{
+                    'unique_name':'learnAirFixedV1',
+                    'device_type':'learnAirFixedV1'},
+                'sensor': {
+                    'sensor_type':'GP2Y1010AU0F',
+                    'metric':'PM25_raw',
+                    'unit':'raw'},
+                                    },
+
+            'pressurewind': {
+                'device':{
+                    'unique_name':'learnAirFixedV1',
+                    'device_type':'learnAirFixedV1'},
+                'sensor': {
+                    'sensor_type':'D6F-PH',
+                    'metric':'pressure_raw_lrnairv1',
+                    'unit':'raw'},
+                                    },
+
+        }.get(x.lower(), None)
+
+    for key in upload_array.keys():
+        learnair_data_upload(
+                [{'type':'organization', 'name':'MIT Media Lab'},
+                {'type':'deployment', 'post_data':{'name':'LearnAirTestDev'}},
+                {'type':'site', 'post_data':{'name':'RoxburyEPA'}}],
+                switch(key),
+                upload_array[key])
+
+
+def learnair_data_upload(loc_path, loc_info, values):
+    #open traverser, move to location safely (create path if necessary),
+    #add data safely (don't overwrite timestamp)
+    if loc_info is not None:
+
+        traverser = ChainTraversal()
+        traverser.find_and_move_path_create(loc_path)
+
+        if loc_info['device'] is not None:
+            traverser.add_and_move_to_resource('device', loc_info['device'])
+        if loc_info['sensor'] is not None:
+            traverser.add_and_move_to_resource('sensor', loc_info['sensor'])
+
+        traverser.safe_add_data(values)
+
+
 if __name__ == '__main__':
 
     excelMainPath ='/Users/davidramsay/Documents/thesis/arduinoDataSafe'
     #locate excel sheet folders
-    print 'search path: %s' % excelMainPath
-    print 'make sure to select a file that has been preprocessed so timestamps are \
-            correct and the data is well-formed'
+    print 'make sure to select a file that has been preprocessed so' + \
+          ' timestamps are correct and the data is well-formed'
 
     file_to_upload = get_file_recurse_dir_prompt()
     values_to_upload = pull_file_values(file_to_upload)
-    #go through each key in values to upload and figure out where it should go
-    #(i.e. sensor type), convert each key to json before uploading
-
-
-#step 2. format to JSON
-
-
-#step 3. crawl and find device
-
-#step 4. locate all sensor URIs
-
-#step 5. match sensors with json data, push sensordata.  if no match, create sensor.
-
-
+    smart_upload(values_to_upload)
 
 

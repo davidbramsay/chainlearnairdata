@@ -353,16 +353,19 @@ class ChainTraversal(object):
         for x in range(len(path_list)-1):
             self.move_to_resource(path_list[x+1]['type'], path_list[x+1]['name'])
 
-
     def find_and_move_path_create(self, path_list):
-        ''' same as find_and_move_path_exists, but this will create the specified
-        path if it does not exist'''
+        ''' expects a list of dicts that will guide us through chain.
+        it will crawl/search for the first object, and then move along
+        the path of all subsequent objects.
+
+        path_list= [{'type':'organization', 'name':'testOrg Name'},
+        {'type':'deployment', 'post_data':{'name':'learnairNet'}}, {'type':'device',
+        'post_data':{'name':'device1'}}] ...'''
 
         self.find_a_resource(path_list[0]['type'], path_list[0]['name'])
 
         for x in range(len(path_list)-1):
-            self.add_and_move_to_resource(path_list[x+1]['type'], path_list[x+1]['name'])
-
+            self.add_and_move_to_resource(path_list[x+1]['type'], path_list[x+1]['post_data'])
 
 
 class PromptedChainTraverse(object):
