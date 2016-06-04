@@ -225,9 +225,11 @@ class ChainTraversal(object):
             self.current_command = 'traverse'
 
             self.print_state()
+            return True
 
         except:
             log.warn('could not find %s resource %s', resource_type, name)
+            return False
 
 
     def pull_data_one_direction(self, start_uri, direction, max_empty_steps):
@@ -335,7 +337,7 @@ class ChainTraversal(object):
             log.warn('post data malformed')
 
         #move to it
-        self.move_to_resource(resource_type, resource_name,
+        return self.move_to_resource(resource_type, resource_name,
                 plural_resource_type=plural_resource_type)
 
 
