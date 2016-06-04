@@ -177,7 +177,7 @@ class ChainTraversal(object):
         return resp
 
 
-    def add_data(self, post_data):
+    def add_data(self, post_data, resource_type='dataHistory'):
         '''does not check for duplicates or overwrites, will simply create
         multiple copies of the same timestamp/values over and over'''
 
@@ -188,7 +188,7 @@ class ChainTraversal(object):
         #get create link
         post_link = self.searcher.find_create_link(
                 namespace=self.namespace,
-                resource_type='dataHistory',
+                resource_type=resource_type,
                 degrees=degrees)[0]
 
         log.info('DATA POST LINK: %s', post_link)
@@ -271,7 +271,7 @@ class ChainTraversal(object):
         return return_data
 
 
-    def get_all_data(self, max_empty_steps=10):
+    def get_all_data(self, max_empty_steps=10, resource_type='dataHistory'):
 
         print 'GET ALL DATA'
         degrees = 1
@@ -280,7 +280,7 @@ class ChainTraversal(object):
         #get uri of starting point
         start_uri = self.searcher.find_first(
                 namespace = self.namespace,
-                resource_type ='dataHistory',
+                resource_type =resource_type,
                 max_degrees=degrees)[0]
 
         #run through previous until max_empty_steps in a row are empty
