@@ -205,10 +205,13 @@ class ChainTraversal(object):
         return resp
 
 
-    def move_to_resource(self, resource_type, name, \
+    def move_to_resource(self, resource_type, name=None, \
             plural_resource_type=None):
 
-        log.info('>> MOVE TO %s', name.upper())
+        if name is not None:
+            log.info('>> MOVE TO %s', name.upper())
+        else:
+            log.info('>> MOVE TO FIRST %s', resource_type.upper())
 
         degrees = 1
 
