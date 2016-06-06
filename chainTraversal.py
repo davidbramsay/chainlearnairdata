@@ -96,9 +96,12 @@ class ChainTraversal(object):
             log.info("can't go forward, no history left")
 
 
-    def find_a_resource(self, resource, name):
+    def find_a_resource(self, resource, name=None):
 
-        log.info('>> FIND/MOVE TO %s', name.upper())
+        if name is not None:
+            log.info('>> FIND/MOVE TO %s', name.upper())
+        else:
+            log.info('>> FIND/MOVE TO FIRST %s', resource.upper())
 
         uri = self.crawler.find(namespace=self.namespace, \
                 resource_title=name, resource_type=resource)
@@ -113,19 +116,19 @@ class ChainTraversal(object):
         self.print_state()
 
 
-    def find_a_deployment(self, name):
+    def find_a_deployment(self, name=None):
         self.find_a_resource('deployment', name)
 
 
-    def find_a_site(self, name):
+    def find_a_site(self, name=None):
         self.find_a_resource('site', name)
 
 
-    def find_an_organization(self, name):
+    def find_an_organization(self, name=None):
         self.find_a_resource('organization', name)
 
 
-    def find_a_device(self, name):
+    def find_a_device(self, name=None):
         self.find_a_resource('device', name)
 
 
