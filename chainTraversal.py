@@ -238,13 +238,32 @@ class ChainTraversal(object):
             return False
 
 
-    def pull_data_one_direction(self, start_uri, direction, max_empty_steps):
+    def pull_data_one_direction(self, start_uri, direction, max_empty_steps, skip_first):
         '''takes a URI, direction 'next' or 'previous', and max_steps, and returns
         a list of dicts of the data'''
         step_counter = 0
         return_data = []
-        current_uri = start_uri
 
+        #set current uri, if we should skip first uri we need to grab
+        #the resource and set it to the proper link
+        if skip_first:
+
+            try:
+                req = requests.get(start_uri)
+                resource_json = req.json()
+            except requests.exceptions.ConnectionError:
+                log.warn( 'URI "%s" unresponsive', start_uri )
+
+            try:
+                current_uri = resource_json['_links'][direction]['href']
+            except:
+                log.warn( 'could not update to %s link' , direction )
+                return return_data
+
+        else:
+            current_uri = start_uri
+
+        #main loop to pull data
         while step_counter < max_empty_steps:
 
             time.sleep(self.crawl_delay/1000.0)
@@ -293,11 +312,11 @@ class ChainTraversal(object):
 
         #run through previous until max_empty_steps in a row are empty
         return_data.extend(
-                self.pull_data_one_direction(start_uri, 'previous', max_empty_steps))
+                self.pull_data_one_direction(start_uri, 'previous', max_empty_steps, skip_first=False))
 
         #run through previous until max_empty_steps in a row are empty
         return_data.extend(
-                self.pull_data_one_direction(start_uri, 'next', max_empty_steps))
+                self.pull_data_one_direction(start_uri, 'next', max_empty_steps, skip_first=True))
 
         #order data
         return_data.sort(key=lambda d: d['timestamp'])
