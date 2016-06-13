@@ -143,8 +143,8 @@ def correct_timestamps_learnair():
                                 (float(file_dict[current_row][key]) * t1) ) / (t1 + t2)
                     except:
                         if key != time_key:
-                            print 'failed to average %s: %s, %s' % \
-                                    (key, val, file_dict[current_row][key])
+                            print 'failed to average row %s, %s: %s, %s' % \
+                                    (current_row, key, val, file_dict[current_row][key])
 
                 new_entry[time_key] = current_time
                 snapped_dict.append(new_entry)
