@@ -1,8 +1,14 @@
 # chaintraverser and chaindatapush
 a python implementation of a stateful web spider to traverse, upload, modify, and interact with nodes and data, including pushing data from Excel files, for ChainAPI (HAL/JSON implementation).
 
-##**chaintraverser** and **chaindatapush** are part of [LearnAir, a master's thesis](https://www.davidbramsay.com/learnair).
+chaintraverser and chaindatapush are part of [LearnAir, a master's thesis](https://www.davidbramsay.com/learnair).
 
+##**documentation and examples**
+
+![Thesis Excerpt](/readme.jpg)
+
+
+## related work
 **code written for LearnAir includes:**
 + [chainCrawler and chainSearcher](https://github.com/dramsay9/chaincrawler) - *a web crawler and a breadth-first-search tool for the semantic web data achitecture ChainAPI*
 + [chainTraverser and chainDataPush](https://github.com/dramsay9/chainlearnairdata) - *a stateful web spider to traverse, upload, modify, and interact with ChainAPI nodes and data, including pushing data from Excel files*
@@ -16,8 +22,6 @@ a python implementation of a stateful web spider to traverse, upload, modify, an
 + [a quick video introducing the learnAir concept](https://vimeo.com/188586371)
 + [the original ChainAPI project](https://github.com/ResEnv/chain-api)
 
-
-
-##**relevant thesis excerpt (with documentation and examples):**
-
-![Thesis Excerpt](/readme.jpg)
+#
+### Contact
+dramsay@mit.edu
